@@ -1,0 +1,8 @@
+<ul class="mt-4">
+  @for(task of tasks; track task; let i = $index) {
+  <li class="flex justify-between items-center border-b py-2">
+    <span>{{ task }}</span>
+    <button (click)="remove.emit(i)" class="text-red-500">削除</button>
+  </li>
+  }
+</ul>
