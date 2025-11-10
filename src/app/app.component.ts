@@ -2,7 +2,7 @@ import { Component, OnInit, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AddTaskComponent } from './components/add-task/add-task.component';
 import { TaskListComponent } from './components/task-list/task-list.component';
-import { TaskService } from './services/task';
+import { TaskService, Task } from './services/task';
 
 @Component({
   selector: 'app-root',
@@ -20,7 +20,7 @@ import { TaskService } from './services/task';
   `,
 })
 export class AppComponent implements OnInit {
-  tasks = signal<string[]>([]);
+  tasks = signal<Task[]>([]);
 
   constructor(private taskService: TaskService) {}
 
